@@ -1,0 +1,22 @@
+# Compiled-out directory
+target/
+
+# Cargo lock file (Remove this line if developing a library, 
+# keep it for executables/applications)
+Cargo.lock
+
+# Rustfmt generated backup files
+**/*.rs.bk
+
+# MSVC Windows builds
+*.pdb
+
+# IDE specific files
+.idea/
+.vscode/
+*.iml
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
