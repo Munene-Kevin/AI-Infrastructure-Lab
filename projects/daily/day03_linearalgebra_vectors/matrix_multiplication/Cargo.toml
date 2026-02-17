@@ -1,5 +1,5 @@
 [package]
-name = "day03_linearAlgebra_vectors"
+name = "matrix_multiplication"
 version = "0.1.0"
 edition = "2024"
 

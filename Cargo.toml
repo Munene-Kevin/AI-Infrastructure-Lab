@@ -1,5 +1,14 @@
 [workspace]
 resolver = "3"
 members = [
-    "projects/daily/day01_process_model"
-, "projects/daily/day02_linux_cli", "projects/daily/day03_linearAlgebra_vectors"]
+    "projects/daily/day01_process_model", 
+    "projects/daily/day03_linearalgebra_vectors/matrix_multiplication"
+    ]
+
+[profile.dev]
+opt-level = 3
+debug = true
+overflow-checks = true
+lto = true
+debug-assertions = true
+codegen-units = 1
