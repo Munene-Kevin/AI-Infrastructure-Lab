@@ -2,4 +2,4 @@
 resolver = "3"
 members = [
     "projects/daily/day01_process_model"
-, "projects/daily/day02_linux_cli"]
+, "projects/daily/day02_linux_cli", "projects/daily/day03_linearAlgebra_vectors"]
