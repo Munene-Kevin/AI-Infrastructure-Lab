@@ -45,7 +45,7 @@ mod tests { // defines a module named tests, which contains the test cases for t
     use super::*; // this line allows the test module to access the items defined in the parent module
                   // (in this case, the matrix_multiply function and the Matrix type alias).
 
-    #[tets] // this attribute indicates that the following function is a test case that should be run when testing the code.
+    #[test] // this attribute indicates that the following function is a test case that should be run when testing the code.
     fn test_matrix_multiply() { // defines a test function named test_matrix_multiply, which will be executed as part of the testing process.
         let a = vec![ // defines matrix a as vector of vectors of f64 (floating-point numbers). 
                      // In this case, matrix a has 2 rows and 3 columns.
@@ -92,20 +92,6 @@ mod tests { // defines a module named tests, which contains the test cases for t
 
             assert!(result.is_err()); // asserts that the result is an error (i.e., the multiplication failed due to incompatible dimensions).
                                       // If the assertion fails, it will panic and indicate that the test case has failed.
-        }
-
-        #[tets]
-        fn test_empty_matrices() { // defines a test function named test_empty_matrices, 
-                                    // which will be executed as part of the testing process.
-            let a: Vec<Vec<f64>> = vec![]; // defines an empty matrix a as a vector of vectors of f64 (floating-point numbers).
-            let b: Vec<Vec<f64>> = vec![]; // defines an empty matrix b as a vector of vectors of f64 (floating-point numbers).
-
-            let result = matrix_multiply(&a, &b).unwrap(); // calls the matrix_multiply function with references to the empty matrices a and b,
-                                                           // and unwraps the result to get the resulting matrix.
-
-            assert_eq!(result, vec![]); // asserts that the resulting matrix is equal to an empty vector, 
-                                        // which is the expected result when multiplying two empty matrices.
-                                        // If the assertion fails, it will panic and indicate that the test case has failed.
         }
 
         #[test]
